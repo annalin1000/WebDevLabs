@@ -59,3 +59,18 @@ td, th {
     padding: 10px;
     border: 1px solid black;
 }
+
+form * {
+    display: block; 
+    margin: auto; 
+    text-align: center; 
+}
+
+
+form {
+    width: 50%;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #ffe6f2; 
+    border-radius: 10px;
+}
