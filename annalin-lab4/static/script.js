@@ -47,10 +47,14 @@ function findTheBananaForEach(array)
 {
     array.forEach(item =>
     {
-        if (item == "Banana")
+        if (item == "Banana" && array == L1)
         {
-            alert("We found a banana in the ${i} array");
+            alert(`We found a banana in the first array`);
         }
+        if (item == "Banana" && array == L2)
+            {
+                alert(`We found a banana in the second array`);
+            }
     });
 }
 findTheBananaForEach(L1);
@@ -60,22 +64,28 @@ function greetingFunc()
 {
     let d = new Date();
     let h = d.getHours();
-
+    message = "My Name is Anna Lin"
     if (h < 12)
     {
         console.log("Good Morning");
+        message = "Good Morning, " + message
     }
     else if (h >= 12 && h < 18)
     {
         console.log("Good afternoon");
+        message = "Good Afternoon, " + message
+
     }
     else if (h >= 18 && h < 20)
     {
         console.log("Good evening");
+        message = "Good Evening, " + message
     }
-    else if (h >= 20 && h < 24) || (h >= 0 && h < 5)
+    else
     {
         console.log("Good night")
+        message = "Good Night, " + message
+
     }
     document.getElementById("greeting").textContent = message;
 }
