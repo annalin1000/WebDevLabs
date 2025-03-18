@@ -75,6 +75,29 @@ form {
     border-radius: 10px;
 }
 
+#submitButton 
+{
+    background-color: #FF1493;
+    color: white;
+    border: none;
+}
+
+.error-message 
+{
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
 #funList 
 {
     display: none;

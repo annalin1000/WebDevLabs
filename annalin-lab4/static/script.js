@@ -131,3 +131,56 @@ $(document).ready(function()
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function()
+{
+    document.getElementById("contactForm").addEventListener("submit", function(event)
+    {
+        let isValid = true;
+
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let comment = document.getElementById("comment");
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let commentError = document.getElementById("commentError");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        commentError.textContent = "";
+
+        if (!name.value.trim())
+        {
+            nameError.textContent = "Your name is required.";
+            isValid = false
+        }
+
+        if (!email.value.trim())
+            {
+                lnameError.textContent = "Your email is required.";
+                isValid = false
+            }
+        else if (!email.checkValidity())
+        {
+            emailError.textContent = "Please enter a valid email address";
+            isValid = false;
+        }
+
+        if (!comment.value.trim())
+        {
+            commentError.textContent = "Please enter your message.";
+            isValid = false;
+        } 
+        if (!isValid)
+        {
+            event.preventDefault();
+        }
+        else
+        {
+            alert("Form submitted successfully! Thank you and have a good day.")
+            event.preventDefault();
+        }
+        
+    });
+});

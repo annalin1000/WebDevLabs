@@ -28,21 +28,22 @@
     <div>
         <main>
             <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
+            <form id = "contactForm" action="submit_form.php" method="post">
+                <label for = "name">Name (required):</label>
+                <input type = "text" id="name" name="name" required><br><br>
+                <span class = "error-message" id = "nameError"></span>
 
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
+                <label for = "email">Email (required):</label>
+                <input type = "email" id="email" name="email" required><br><br>
+                <span class = "error-message" id = "emailError"></span>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
+                <label for="comment">Your comment (required):</label>
+                <textarea type="comment" id="comment" name="comment" rows = "4" cols = "30"></textarea><br><br>
+                <span class = "error-message" id = "commentError"></span>
 
-                <label for="comment">Your comment:</label>
-                <input type="comment" id="comment" name="comment" rows = "4" cols = "30"><br><br>
-
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id = "submitButton">
             </form>
+            <p class = "form-note">Please fill out the form correctly so I can get back to you :D</p>
             <h3>Contact Information</h3>
             <table>
                 <tr>
