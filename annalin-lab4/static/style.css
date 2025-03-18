@@ -91,10 +91,11 @@ form {
 }
 
 .form-note {
-    text-align: center;
     font-size: 14px;
     color: #555;
     margin-top: 10px;
+    text-align: center;
+    width: 100%; 
 }
 
 
