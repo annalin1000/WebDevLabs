@@ -15,7 +15,7 @@
     <meta name = "description" content "Anna Lin's Professional Website">
     <title>Anna Lin</title>
 </head>
-<body>
+<body onload = "addYear()">
     <header> 
         <h1 id="webname">Anna Lin</h1>
         <nav>
@@ -28,13 +28,16 @@
     <div>
         <main>
             <h2>Things I love to do for fun</h2>
-            <ul>
+            <button id = "showListButton" onclick = "showList()">Click to see...</button>
+            <ul id = "funList">
                 <li>choreographing dance pieces</li>
                 <li>playing the flute</li>
                 <li>hanging out with friends and family</li>
                 <li>exploring interests through coding and organizing STEM activities</li>
             </ul>
-            <footer>© 2025 designed and coded by Anna Lin</footer>
+            <footer>
+                <p id = "copyYear"></p>
+            </footer>
         </main>
     </div>
     

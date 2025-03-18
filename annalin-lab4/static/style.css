@@ -74,3 +74,66 @@ form {
     background-color: #ffe6f2; 
     border-radius: 10px;
 }
+
+#funList 
+{
+    display: none;
+}
+
+#showListButton 
+{
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#showListButton:hover{
+    background-color: #d63384;
+}
+
+#bioSection
+{
+    text-align: left;
+    margin: auto;
+    padding-left: 0px
+}
+
+#bioSection p{
+    text-align: left;
+}
+
+button{
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d63384
+}
+
+#readMore, #readLess {
+    display: block;
+    margin: 20px 0;
+    text-align: left;
+}
+
+#readMore, #readLess {
+    background-color: #FF1493; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: left;  
+}
+
+#readMore:hover, #readLess:hover {
+    background-color: #d63384;
+}

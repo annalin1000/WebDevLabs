@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./static/script.js" defer> </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,10 +14,10 @@
     <title>Document</title>
     <meta name = "author" content = "Anna Lin">
     <meta name = "keywords" content = "Carnegie Mellon University, Information Systems">
-    <meta name = "description" content "Anna Lin's Professional Website">
+    <meta name = "description" content = "Anna Lin's Professional Website">
     <title>Anna Lin</title>
 </head>
-<body>
+<body onload = "addYear()">
     <header> 
         <h1 id="webname">Anna Lin</h1>
         <nav><a href="index.html">about</a>
@@ -28,14 +30,29 @@
         <main>
             <h2 id = "greeting" >Hi, my name is Anna Lin</h2>
             <img src="static/HEADSHOT.png" width="348" height="463">
-            <p>I am a freshman majoring in Information Systems at Carnegie Mellon University. I enjoy exploring the intersections of technology, healthcare, and the arts. <br><br>
-                In high school, I was deeply invovled in STEM outreach, hosting coding workshops for underserved communities to help girls explore their passions in 
+
+            <p id = "shortBio">
+                Hello! I am a freshman majoring in Information Systems at Carnegie Mellon University.I enjoy exploring the intersections of technology, healthcare, and the arts.
+            </p>
+
+            <div id = "bioSection">
+                <p id = "fullBio" style = "display: none;">
+                    Hello! I am a freshman majoring in Information Systems at Carnegie Mellon University.I enjoy exploring the intersections of technology, healthcare, and the arts.
+                    <br><br>
+                    In high school, I was deeply invovled in STEM outreach, hosting coding workshops for underserved communities to help girls explore their passions in 
                 technology. At the same time, I fostered artistic expression by choreographing dance pieces open to all student, creating a space for creative exploration. 
                 I also developed a strong interest in research and problem-solbing, which led me to pursue interdisciplinary projects.
                 <br><br>
                 During the summer before college, I interned at Boeing, working on 
-                industrial engineering and additive manufacturing projects. I co-led an Integrated Project Team, hosted weekly conferences for 65 interns, and facilitated discussions with guest speakers to help students navigate careers in STEM. Now, in college, I continue applying my technical and analytical skills to research, including AI bias studies and exploratory data analysis, as I work toward a future in medicine. </p>
-            <footer>© 2025 designed and coded by Anna Lin</footer>
+                industrial engineering and additive manufacturing projects. I co-led an Integrated Project Team, hosted weekly conferences for 65 interns, and facilitated discussions with guest speakers to help students navigate careers in STEM. Now, in college, I continue applying my technical and analytical skills to research, including AI bias studies and exploratory data analysis, as I work toward a future in medicine.
+                </p>
+
+                <button id = "readMore">Read More</button>
+                <button id = "readLess" style="display: none;">Read Less</button>
+            </div>
+            <footer>
+                <p id = "copyYear"></p>
+            </footer>
         </main>
     </div>
     

@@ -57,14 +57,14 @@ function findTheBananaForEach(array)
             }
     });
 }
-findTheBananaForEach(L1);
-findTheBananaForEach(L2);
+// findTheBananaForEach(L1);
+// findTheBananaForEach(L2);
 
 function greetingFunc() 
 {
     let d = new Date();
     let h = d.getHours();
-    message = "My Name is Anna Lin"
+    message = "my name is Anna Lin"
     if (h < 12)
     {
         console.log("Good Morning");
@@ -90,3 +90,44 @@ function greetingFunc()
     document.getElementById("greeting").textContent = message;
 }
 greetingFunc();
+
+function addYear()
+{
+    var d = new Date();
+    var y = d.getFullYear();
+    var E = document.getElementById("copyYear");
+
+    if (E)
+    {
+        E.textContent = "© " + y + " Designed and coded by Anna Lin "
+    }
+}
+
+function showList()
+{
+    let list = document.getElementById("funList");
+    let button = document.getElementById("showListButton");
+
+    list.style.display = "block";
+    button.style.display = "none";
+}
+
+$(document).ready(function()
+{
+    $("#readMore").click(function()
+    {
+        $("#shortBio").hide();
+        $("#fullBio").show();
+        $("#readMore").hide();
+        $("#readLess").show();
+    });
+
+    $("#readLess").click(function()
+    {
+        $("#shortBio").show();
+        $("#fullBio").hide();
+        $("#readMore").show();
+        $("#readLess").hide();
+    });
+});
+
