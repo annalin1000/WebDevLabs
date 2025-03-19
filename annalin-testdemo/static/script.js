@@ -90,3 +90,10 @@ function greetingFunc()
     document.getElementById("greeting").textContent = message;
 }
 greetingFunc();
+
+function addYear() {
+    var d = newDate();
+    var y = d.getFullYear;
+    var E = document.getElementById("copyYear");
+    
+}
