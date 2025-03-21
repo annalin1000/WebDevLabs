@@ -1,124 +1,17 @@
-function greetingFunc() 
-{
-    let d = new Date();
-    let h = d.getHours();
-    message = "my name is Anna Lin"
-    if (h < 12)
-    {
-        console.log("Good Morning");
-        message = "Good Morning, " + message
-    }
-    else if (h >= 12 && h < 18)
-    {
-        console.log("Good afternoon");
-        message = "Good Afternoon, " + message
+document.getElementById("locationButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents the page from refreshing
 
-    }
-    else if (h >= 18 && h < 20)
-    {
-        console.log("Good evening");
-        message = "Good Evening, " + message
-    }
-    else
-    {
-        console.log("Good night")
-        message = "Good Night, " + message
+    let mapContainer = document.getElementById("mapContainer");
 
-    }
-    document.getElementById("greeting").textContent = message;
-}
-greetingFunc();
-
-function addYear()
-{
-    var d = new Date();
-    var y = d.getFullYear();
-    var E = document.getElementById("copyYear");
-
-    if (E)
-    {
-        E.textContent = "© " + y + " Designed and coded by Anna Lin "
-    }
-}
-
-function showList()
-{
-    let list = document.getElementById("funList");
-    let button = document.getElementById("showListButton");
-
-    list.style.display = "block";
-    button.style.display = "none";
-}
-
-$(document).ready(function()
-{
-    $("#readMore").click(function()
-    {
-        $("#shortBio").hide();
-        $("#fullBio").show();
-        $("#readMore").hide();
-        $("#readLess").show();
-    });
-
-    $("#readLess").click(function()
-    {
-        $("#shortBio").show();
-        $("#fullBio").hide();
-        $("#readMore").show();
-        $("#readLess").hide();
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function()
-{
-    document.getElementById("contactForm").addEventListener("submit", function(event)
-    {
-        let isValid = true;
-
-        let name = document.getElementById("name");
-        let email = document.getElementById("email");
-        let comment = document.getElementById("comment");
-
-        let nameError = document.getElementById("nameError");
-        let emailError = document.getElementById("emailError");
-        let commentError = document.getElementById("commentError");
-
-        nameError.textContent = "";
-        emailError.textContent = "";
-        commentError.textContent = "";
-
-        if (!name.value.trim())
-        {
-            nameError.textContent = "Your name is required.";
-            isValid = false
-        }
-
-        if (!email.value.trim())
-            {
-                lnameError.textContent = "Your email is required.";
-                isValid = false
-            }
-        else if (!email.checkValidity())
-        {
-            emailError.textContent = "Please enter a valid email address";
-            isValid = false;
-        }
-
-        if (!comment.value.trim())
-        {
-            commentError.textContent = "Please enter your message.";
-            isValid = false;
-        } 
-        if (!isValid)
-        {
-            event.preventDefault();
-        }
-        else
-        {
-            alert("Form submitted successfully! Thank you and have a good day.")
-            event.preventDefault();
-        }
-        
-    });
+    // Replace static image with an interactive map
+    mapContainer.innerHTML = `
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.0412859270164!2d-80.017864684594!3d40.43972247936139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2266c0d6405%3A0xa2a763b4c26c6b08!2sDuquesne%20Incline!5e0!3m2!1sen!2sus!4v1618241344371!5m2!1sen!2sus" 
+            width="100%" 
+            height="200px" 
+            style="border-radius: 5px;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    `;
 });

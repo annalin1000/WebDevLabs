@@ -11,52 +11,93 @@
     <link rel="stylesheet" href="./static/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
     <meta name = "author" content = "Anna Lin">
     <meta name = "keywords" content = "Carnegie Mellon University, Information Systems">
     <meta name = "description" content = "Anna Lin's Professional Website">
-    <title>Anna Lin</title>
+    <title>Duquesne Incline</title>
 </head>
-<body onload = "addYear()">
-    <header> 
-        <h1 id="webname">Welcome to the Duquesnes Incline</h1>
-        <nav><a href="index.html">Home</a>
-             <a href="views/history.html">Our History</a>
-             <a href="views/plan visit.html">Plan Your Visit</a>
-             <a href="views/shops+suuport.html">Shop & Support</a>
-             <a href="views/contact+location.html">Contact & Location</a></nav>
-    </header>
-    <!-- <p>don't worry Anna! it is all good!</p> -->
-    <div>
-        <main>
-            <h2 id = "greeting" >Hi, my name is Anna Lin</h2>
-            <img src="static/Duquesne Incline Web Dev Project/static/duquesne.jpeg" width="348" height="463">
-
-            <p id = "shortBio">
-                Hello! I am a freshman majoring in Information Systems at Carnegie Mellon University.I enjoy exploring the intersections of technology, healthcare, and the arts.
-            </p>
-
-            <div id = "bioSection">
-                <p id = "fullBio" style = "display: none;">
-                    Hello! I am a freshman majoring in Information Systems at Carnegie Mellon University. I enjoy exploring the intersections of technology, healthcare, and the arts.
-                    <br><br>
-                    In high school, I was deeply invovled in STEM outreach, hosting coding workshops for underserved communities to help girls explore their passions in 
-                technology. At the same time, I fostered artistic expression by choreographing dance pieces open to all student, creating a space for creative exploration. 
-                I also developed a strong interest in research and problem-solving, which led me to pursue interdisciplinary projects.
-                <br><br>
-                During the summer before college, I interned at Boeing, working on industrial engineering and additive manufacturing projects. I co-led an Integrated Project Team, 
-                hosted weekly conferences for 65 interns, and facilitated discussions with guest speakers to help students navigate careers in STEM. Now, in college, I continue 
-                applying my technical and analytical skills to research, including AI bias studies and exploratory data analysis, as I work toward a future in medicine.
-                </p>
-
-                <button id = "readMore">Read More</button>
-                <button id = "readLess" style="display: none;">Read Less</button>
+<body>
+    <header>
+        <nav class = "top-nav">
+            <div class = "logo">
+                <img src = "pictures/DuqInclineLogo.png" alt = "Duquesne Incline Logo">
             </div>
-            <footer>
-                <p id = "copyYear"></p>
-            </footer>
-        </main>
-    </div>
-    
+            <div class = "nav-links">
+                <a href = "#" class = "button">Home</a>
+                <a href = "#" class = "button">Contact Us</a>
+            </div>
+        </nav>
+        <nav class = "main-nav">
+            <div class = "dropdown">
+                <a href = "#" class = "dropbtn">Your Visit</a>
+                <div class="dropdown-content">
+                    <a href="#">Tickets & Hours</a>
+                    <a href="#">Directions & Parking</a>
+                    <a href="#">Accessibility & Visitor Zones</a>
+                    <a href="#">Payment Options</a>
+                </div>
+            </div>
+
+            <div class = "dropdown">
+                <a href = "#" class = "dropbtn">Tours & Group Visits</a>
+                <div class="dropdown-content">
+                    <a href="#">School Field Trips</a>
+                    <a href="#">Private & Group Tours</a>
+                    <a href="#">Event Booking</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+
+            <div class = "dropdown">
+                <a href = "#" class = "dropbtn">History & Heritage</a>
+                <div class="dropdown-content">
+                    <a href="#">Story</a>
+                    <a href="#">Restoration & Preservatoin</a>
+                    <a href="#">Historial Photo Gallery</a>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href = "#">Shops & Support</a></li>
+                <li><a href = "#">Explore Pittsburgh</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class = "mainHeader">
+            <h1>Welcome To The Duquesne Incline</h1>
+            <br>
+            <a href = "#" class = "button main-button">Plan Your Visit Now!</a>
+        </section>
+
+        <section class = "info">
+            <div class = "info-box">
+                <img src = "pictures/explore_pittsburgh.jpg" alt = "Explore Pittsburgh">
+                <a href = "#" class = "button overlay-button">Explore Pittsburgh</a>
+            </div>
+            
+            <div class="info-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.0412859270164!2d-80.017864684594!3d40.43972247936139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2266c0d6405%3A0xa2a763b4c26c6b08!2sDuquesne%20Incline!5e0!3m2!1sen!2sus!4v1618241344371!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="200px" 
+                    style="border-radius: 5px; border: 0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                <a href = "#" class = "button overlay-button">Location!</a>
+            
+            </div>
+
+            <div class = "info-box">
+                <img src = "pictures/history.webp" alt = "Learn The History">
+                <a href = "#" class = "button overlay-button">Learn The History</a>
+            </div>
+        </section>
+
+        
+
+    </main>
 </body>
 </html>

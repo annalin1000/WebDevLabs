@@ -1,163 +1,236 @@
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: "Times New Roman", serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
     font-variation-settings: "wght" 100;
-    padding: 5px;
-    margin: 5px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
 }
 
-#webname {
-    background-color: #ffb6c1; 
-    color: #d63384; 
-    padding: 10px;
-    text-align: center;
+body {
+    background-color: #d8c6aa;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b6419;
+    width: 100%;
+    height: 60px; 
+    padding: 0 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links .button {
+    background-color: #a03b2c; 
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
+}
+
+.nav-links .button:hover {
+    background-color: #5383ec; 
+}
+
+.main-nav {
+    background-color: #869468;
+    width: 100%;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 60px; 
+    left: 0;
+    z-index: 999;
+}
+
+.main-nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: normal;
+}
+
+
+main {
+    padding-top: 100px; 
 }
 
 nav {
+    background-color: #869468;
+    padding: 15px;
     text-align: center;
 }
 
-nav .nav-link {
-    display: block; 
-    color: #FF1493; 
-    font-weight: bold; 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
-    margin: 10px auto; 
-    padding: 10px; 
-    width: fit-content;
 }
 
-th {
-    padding: 12px 0;
-    background-color: #FF1493; 
-    color: white; 
-    text-align: left;
-    width: fit-content; 
-}
-
-
-tr:nth-child(even) {
-    background-color: #f2f2f2; 
-}
-
-
-tr:nth-child(odd) {
-    background-color: #ffe6f2; 
-}
-
-table {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
-    border: 1px solid black;
-}
-
-td, th {
-    padding: 10px;
-    border: 1px solid black;
-}
-
-form * {
-    display: block; 
-    margin: auto; 
-    text-align: center; 
-}
-
-
-form {
-    width: 50%;
-    margin: 20px auto; 
-    padding: 20px;
-    background-color: #ffe6f2; 
-    border-radius: 10px;
-}
-
-#submitButton 
-{
-    background-color: #FF1493;
+.mainHeader {
+    max-width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #a03b2c; 
     color: white;
-    border: none;
-}
-
-.error-message 
-{
-    color: red;
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
-}
-
-.form-note {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
     text-align: center;
-    width: 100%; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.mainHeader h1 {
+    font-size: 50px;
+    font-weight: normal;
+}
 
-#funList 
-{
+.main-button {
+    display: inline-block;
+    background-color: #2b6419;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-style: italic;
+    
+}
+
+.main-button:hover {
+    background-color: #5383ec;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    position: relative;
+    width: 400px;
+    height: 300px; 
+    text-align: center;
+}
+
+.info-box img, .info-box iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a03b2c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.overlay-button:hover {
+    background-color: #5383ec;
+}
+
+.map-container {
     display: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-#showListButton 
-{
-    background-color: #FF1493;
+.map-container iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Style main menu links */
+.dropbtn {
     color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
 }
 
-#showListButton:hover{
-    background-color: #d63384;
+/* Dropdown menu - hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #a03b2c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-#bioSection
-{
-    text-align: left;
-    margin: auto;
-    padding-left: 0px
-}
-
-#bioSection p{
-    text-align: left;
-}
-
-button{
-    background-color: #FF1493;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #d63384
-}
-
-#readMore, #readLess {
+/* Dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
     display: block;
-    margin: 20px 0;
-    text-align: left;
+    font-size: 12px
 }
 
-#readMore, #readLess {
-    background-color: #FF1493; 
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    text-align: left;  
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-#readMore:hover, #readLess:hover {
-    background-color: #d63384;
+/* Hover effect */
+.dropdown-content a:hover {
+    background-color: #d8c6aa;
 }
