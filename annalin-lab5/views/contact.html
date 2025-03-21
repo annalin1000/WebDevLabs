@@ -25,8 +25,37 @@
              <a href="fun.html">extracurriculars</a></nav>
     </header>
     <!-- <p>don't worry Anna! it is all good! </p> -->
-    <div>
-        <main>
+    <div class = "content-wrapper">
+        <div class = "left-column">
+            <h2>Find Me</h2>
+            <iframe
+                class = "googleMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093704!2d-122.41941548468198!3d37.77492927975917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f8e10ab%3A0x4c7e5f6e4e7a31!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1647965288564!5m2!1sen!2sus"
+                allowfullscreen 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-cross-origin">
+            </iframe>
+
+            <table>
+                <br><br> 
+                <br><br> 
+                <tr>
+                    <td>Email:</td>
+                    <td>annalin@andrew.cmu.edu</td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>+1 (949) 531-8807</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn:</td>
+                    <td>https://www.linkedin.com/in/anna-lin888/</td>
+                </tr>
+            </table>
+            <br><br> 
+        </div>
+            
+        <div class = "right-column">
             <h2>Contact Me</h2>
             <form id = "contactForm" action="submit_form.php" method="post">
                 <label for = "name">Name (required):</label>
@@ -45,26 +74,12 @@
             </form>
             <p class = "form-note">Please fill out the form correctly so I can get back to you :D</p>
             <h3>Contact Information</h3>
-            <table>
-                <tr>
-                    <td>Email:</td>
-                    <td>annalin@andrew.cmu.edu</td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td>+1 (949) 531-8807</td>
-                </tr>
-                <tr>
-                    <td>LinkedIn:</td>
-                    <td>https://www.linkedin.com/in/anna-lin888/</td>
-                </tr>
-            </table>
-            <br><br> 
-            <footer>
-                <p id = "copyYear"></p>
-            </footer>
-        </main>
+            
+        </div>
     </div>
+    <footer>
+        <p id = "copyYear"></p>
+    </footer>
     
 </body>
 </html>
