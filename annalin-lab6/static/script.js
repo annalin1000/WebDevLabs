@@ -1,0 +1,198 @@
+let x = 5;
+let y = 7;
+let z = x + y;
+console.log(z);
+
+let A = "Hello "
+let B = "world!"
+let C = A + B;
+console.log(C)
+
+function SumNPrint(x1, x2) 
+{
+    let x3 = x1 + x2;
+    console.log(x3);
+}
+SumNPrint(x, y);
+SumNPrint(A, B);
+
+if (C.length > z) 
+{
+    console.log(C);
+}
+else if (C.length < z) 
+{
+    console.log(z);
+}
+else 
+{
+    console.log("good job!");
+}
+
+let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
+let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
+
+// function findTheBanana(array) 
+// {
+//     for (let i = 0; i < array.length; i++)
+//     {
+//         if (array[i] == "Banana")
+//         {
+//             alert("found the Banana in ${i}!");
+//         }
+//     }
+// }
+
+function findTheBananaForEach(array) 
+{
+    array.forEach(item =>
+    {
+        if (item == "Banana" && array == L1)
+        {
+            alert(`We found a banana in the first array`);
+        }
+        if (item == "Banana" && array == L2)
+            {
+                alert(`We found a banana in the second array`);
+            }
+    });
+}
+// findTheBananaForEach(L1);
+// findTheBananaForEach(L2);
+
+function greetingFunc() 
+{
+    let d = new Date();
+    let h = d.getHours();
+    message = "my name is Anna Lin"
+    if (h < 12)
+    {
+        console.log("Good Morning");
+        message = "Good Morning, " + message
+    }
+    else if (h >= 12 && h < 18)
+    {
+        console.log("Good afternoon");
+        message = "Good Afternoon, " + message
+
+    }
+    else if (h >= 18 && h < 20)
+    {
+        console.log("Good evening");
+        message = "Good Evening, " + message
+    }
+    else
+    {
+        console.log("Good night")
+        message = "Good Night, " + message
+
+    }
+    document.getElementById("greeting").textContent = message;
+}
+greetingFunc();
+
+function addYear()
+{
+    var d = new Date();
+    var y = d.getFullYear();
+    var E = document.getElementById("copyYear");
+
+    if (E)
+    {
+        E.textContent = "© " + y + " Designed and coded by Anna Lin "
+    }
+}
+
+// function showList()
+// {
+//     let list = document.getElementById("funList");
+//     let button = document.getElementById("showListButton");
+
+//     list.style.display = "block";
+//     button.style.display = "none";
+// }
+
+$(document).ready(function()
+{
+    $("#readMore").click(function()
+    {
+        $("#shortBio").hide();
+        $("#fullBio").show();
+        $("#readMore").hide();
+        $("#readLess").show();
+    });
+
+    $("#readLess").click(function()
+    {
+        $("#shortBio").show();
+        $("#fullBio").hide();
+        $("#readMore").show();
+        $("#readLess").hide();
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function()
+{
+    document.getElementById("contactForm").addEventListener("submit", function(event)
+    {
+        let isValid = true;
+
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let comment = document.getElementById("comment");
+
+        let nameError = document.getElementById("nameError");
+        let emailError = document.getElementById("emailError");
+        let commentError = document.getElementById("commentError");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        commentError.textContent = "";
+
+        if (!name.value.trim())
+        {
+            nameError.textContent = "Your name is required.";
+            isValid = false
+        }
+
+        if (!email.value.trim())
+            {
+                lnameError.textContent = "Your email is required.";
+                isValid = false
+            }
+        else if (!email.checkValidity())
+        {
+            emailError.textContent = "Please enter a valid email address";
+            isValid = false;
+        }
+
+        if (!comment.value.trim())
+        {
+            commentError.textContent = "Please enter your message.";
+            isValid = false;
+        } 
+        if (!isValid)
+        {
+            event.preventDefault();
+        }
+        else
+        {
+            alert("Form submitted successfully! Thank you and have a good day.")
+            event.preventDefault();
+        }
+        
+    });
+});
+
+function getAdvice() {
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => response.json()) 
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice; 
+        })
+        .catch(error => {
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again!";
+            console.error("Error fetching advice:", error);
+        });
+}
